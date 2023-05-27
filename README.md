@@ -34,7 +34,7 @@ I'm currently a fourth-year student majoring in Software Engineering at Sungkyun
 ### Sungkyunkwan University
 + Degree: Bachelor
 + Major: Computer Science and Engineering
-+ Course: Open Source Software Practice
++ Course: Open Source Software Practice, Software Engineering
 
 ## Achievements and Certifications
 > Records any awards, certifications, or honors you have received.
