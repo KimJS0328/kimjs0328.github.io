@@ -1,9 +1,12 @@
 name: Deploy GitHub Pages
 
+# Trigger this workflow when commit is pushed on main branch
 on:
   push:
     branches:
-      - main
+      - main 
+
+# Specify the permissions required for the workflow
 permissions:
   contents: read
   pages: write
@@ -11,20 +14,26 @@ permissions:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    # use latest version of ubuntu
+    runs-on: ubuntu-latest 
 
     steps:
+      # Bring the latest commit from the github repository
       - name: Checkout
         uses: actions/checkout@v3
 
+      # Configures page settings.
       - name: Configure
         uses: actions/configure-pages@v3
 
+      # Build a page using static site generator 'jekyll'
       - name: Build
-        uses: actions/jekyll-build-pages@v1
+        uses: actions/jekyll-build-pages@v1 
 
+      # Upload built site as artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-        
+
+      # Deploy the github page using the uploaded artifact
       - name: Deploy
         uses: actions/deploy-pages@v2
